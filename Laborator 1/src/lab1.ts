@@ -19,3 +19,13 @@ abstract class Car implements IVehicle {
     }
     abstract nr(number: string)
 }
+class Engine extends Car {
+    constructor(model: string) {
+        super(model)
+    }
+    nr(number): void {
+        console.log(`${this.engineModel()} have the number ${number}`)
+    }
+}
+const engine: IVehicle = new Engine('TDI')
+engine.nr('H22AM03737')
