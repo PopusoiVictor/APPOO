@@ -11,5 +11,5 @@ Studentul grupei TI-153 Popusoi Victor
 
 Pentru a merge la continutul lucarii de laborator nr.1 click [here](https://github.com/PopusoiVictor/APPOO/tree/master/Laborator%201)
 
-Pentru a vedea continutul raportului click [here](https://github.com/PopusoiVictor/APPOO)
+Pentru a vedea continutul raportului click [here](https://github.com/PopusoiVictor/APPOO/blob/master/Laborator%201/Lab%20template.pdf)
 
