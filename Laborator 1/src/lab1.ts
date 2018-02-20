@@ -4,14 +4,16 @@ interface IVehicle {
 abstract class Car implements IVehicle {
     private model: string
     private number: string
-    public engineModel(): string {
+    public Model(): string {
         switch (this.model) {
             case 'TDI':
                 return this.model = 'Engine ' + `${this.model}`
             case 'CDI':
                 return this.model = 'Engine ' + `${this.model}`
+            case 'BBS':
+                return this.model = 'Wheels ' + `${this.model}`
             default:
-                return this.model = 'Only TDI and CDI engine'
+                return this.model = 'The model do not'
         }
     }
     constructor(model: string) {
@@ -24,8 +26,18 @@ class Engine extends Car {
         super(model)
     }
     nr(number): void {
-        console.log(`${this.engineModel()} have the number ${number}`)
+        console.log(`${this.Model()} have the number ${number}`)
     }
 }
-const engine: IVehicle = new Engine('TDI')
+class Wheel extends Car {
+    constructor(model: string) {
+        super(model)
+    }
+    nr(number): void {
+        console.log(`${this.Model()} have the ${number}`)
+    }
+}
+const engine = new Engine('TDI')
+const wheel = new Wheel('BBS')
 engine.nr('H22AM03737')
+wheel.nr('original size 15')
