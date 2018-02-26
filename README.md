@@ -15,7 +15,7 @@ Pentru a vedea continutul raportului click [here](https://github.com/PopusoiVict
 
 ### Lucrarea de laborator nr.2
 
-Pentru a merge la continutul lucarii de laborator nr.1 click [here](https://github.com/PopusoiVictor/APPOO/tree/master/Laborator%202)
+Pentru a merge la continutul lucarii de laborator nr.2 click [here](https://github.com/PopusoiVictor/APPOO/tree/master/Laborator%202)
 
 Pentru a vedea continutul raportului click [here](https://github.com/PopusoiVictor/APPOO/blob/master/Laborator%202/Lab%20template.pdf)
 
