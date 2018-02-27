@@ -13,18 +13,36 @@ interface ITriangle {
 interface IType {
     TriangleType(a: number, b: number, c: number)
 }
-class FigureArea implements IArea {
+class Square implements ISquare {
     public a: number
-    public r: number
-    constructor(a: number, r: number) {
+    constructor(a: number) {
         this.a = a
-        this.r = r
     }
     SquareArea(a): void {
         let result = a * a
         console.log("-----SQUARE-----")
         console.log("Square sides: a = " + a)
         console.log("Square area: " + result)
+    }
+}
+class Rectangle implements IRectangle {
+    public a: number
+    public b: number
+    constructor(a: number, b: number) {
+        this.a = a
+        this.b = b
+    }
+    RectanglePerimeter(a, b): void {
+        let result = (2 * a) + (2 * b)
+        console.log("-----RECTANGLE-----")
+        console.log("Rectangle sides: a = " + a + ", b = " + b)
+        console.log("Rectangle perimeter: " + result)
+    }
+}
+class Circle implements ICircle {
+    public r: number
+    constructor(r: number) {
+        this.r = r
     }
     CircleArea(r): void {
         let pi = 3.14
@@ -34,20 +52,14 @@ class FigureArea implements IArea {
         console.log("Circle area: " + result)
     }
 }
-class FigurePerimeter implements IPerimeter {
+class Triangle implements ITriangle {
     public a: number
     public b: number
     public c: number
     constructor(a: number, b: number, c: number) {
         this.a = a
-        this.b = b
-        this.c = c
-    }
-    RectanglePerimeter(a, b): void {
-        let result = (2 * a) + (2 * b)
-        console.log("-----RECTANGLE-----")
-        console.log("Rectangle sides: a = " + a + ", b = " + b)
-        console.log("Rectangle perimeter: " + result)
+        this.b = a
+        this.c = a
     }
     TrianglePerimeter(a, b, c): void {
         let result = a + b + c
