@@ -68,15 +68,10 @@ class Triangle implements ITriangle {
         console.log("Triangle perimeter: " + result)
     }
 }
-class Type implements IType {
+class Type extends Triangle {
     public a: number
     public b: number
     public c: number
-    constructor(a: number, b: number, c: number) {
-        this.a = a
-        this.b = b
-        this.c = c
-    }
     TriangleType(a, b, c): void {
         if (a === b === c) {
             console.log("Triangle is equilateral")
@@ -89,11 +84,12 @@ class Type implements IType {
         }
     }
 }
-const area = new FigureArea(5, 7)
-area.SquareArea(5)
-area.CircleArea(7)
-const perimeter = new FigurePerimeter(5, 7, 5)
-perimeter.RectanglePerimeter(5, 7)
-perimeter.TrianglePerimeter(5, 7, 6)
-const type = new Type(5, 6, 7)
-type.TriangleType(5, 6, 7)
+const square = new Square(5)
+square.SquareArea(5)
+const rectangle = new Rectangle(5, 7)
+rectangle.RectanglePerimeter(5, 7)
+const circle = new Circle(4)
+circle.CircleArea(4)
+const triangle = new Type(5, 6, 7)
+triangle.TrianglePerimeter(5, 6, 7)
+triangle.TriangleType(5, 6, 7)
