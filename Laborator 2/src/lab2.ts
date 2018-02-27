@@ -1,10 +1,14 @@
-interface IPerimeter {
-    RectanglePerimeter(a: number, b: number)
-    TrianglePerimeter(a: number, b: number, c: number)
-}
-interface IArea {
+interface ISquare {
     SquareArea(a: number)
+}
+interface IRectangle {
+    RectanglePerimeter(a: number, b: number)
+}
+interface ICircle {
     CircleArea(r: number)
+}
+interface ITriangle {
+    TrianglePerimeter(a: number, b: number, c: number)
 }
 interface IType {
     TriangleType(a: number, b: number, c: number)
