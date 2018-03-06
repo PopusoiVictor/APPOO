@@ -38,11 +38,10 @@ class GiftItem implements IComputerDescription {
     public GetColor(): string {
         return "Rosu, negru, alb"
     }
-    public GetPrice(){
-        return 0;
-    }
-    public CalculatePriceWithDiscount(){
-        return 0;
+}
+class CalculateComputerPrice implements IPriceCalculation {
+    public CalculatePriceWithDiscount(calculate : IComputerPrice) : any {
+        return calculate.GetPrice() - calculate.GetPrice() * 0.1;
     }
 }
 class Shop {
@@ -50,11 +49,11 @@ class Shop {
         var myComp = cmptype.GetDescription();
         return myComp;
     }
-    public GetMyComputerPrice(cmptype : IComputerDescription): any {
-        var myCompprice = "Pretul este " + cmptype.CalculatePriceWithDiscount();
+    public GetMyComputerPrice(cmpCal : IPriceCalculation, cmpPrice : IComputerPrice) : any {
+        var myCompprice = "Pretul este " + cmpCal.CalculatePriceWithDiscount(cmpPrice);
         return myCompprice;
     }
-    public GetAvailableColor(cmptype : IComputerDescription): any {
+    public GetAvailableColor(cmptype : IComputerDescription) : any {
         var myCompcolor = cmptype.GetColor();
         return myCompcolor;
     }
