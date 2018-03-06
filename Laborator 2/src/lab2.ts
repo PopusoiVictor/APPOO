@@ -1,23 +1,22 @@
-import {IComputerDescription} from "./interfaceBad"
-class Desktop implements IComputerDescription {
-    public desktopPrice: number 
+import {IComputerDescription} from "./interface"
+import {IComputerPrice} from "./interface"
+import {IPriceCalculation} from "./interface"
+class Desktop implements IComputerDescription,IComputerPrice {
+    public desktopPrice : number
     constructor(desktopPrice : number) {
         this.desktopPrice = desktopPrice
     }
-    public GetDescription(): string{
+    public GetDescription(): string {
         return "Calculator Desktop";
-    }     
-    public GetColor(){
+    }
+    public GetColor() {
         return "Negru";
     }
-    public GetPrice(){
+    public GetPrice() {
         return this.desktopPrice;
     }
-    public CalculatePriceWithDiscount() : any {
-        return this.desktopPrice - this.desktopPrice * 0.1;
-    }
 }
-class Laptop implements IComputerDescription {
+class Laptop implements IComputerDescription, IComputerPrice {
     public laptopPrice : number
     constructor(laptopPrice : number) {
         this.laptopPrice = laptopPrice
@@ -30,9 +29,6 @@ class Laptop implements IComputerDescription {
     }
     public GetPrice(): number {
         return this.laptopPrice
-    }
-    public CalculatePriceWithDiscount() : any {
-        return this.laptopPrice - this.laptopPrice * 0.1;
     }
 }
 class GiftItem implements IComputerDescription {
