@@ -1,6 +1,10 @@
 export interface IComputerDescription {
     GetDescription();
     GetColor();
+}
+export interface IComputerPrice {
     GetPrice();
-    CalculatePriceWithDiscount();
+}
+export interface IPriceCalculation {
+    CalculatePriceWithDiscount(calculate : IComputerPrice);
 }
