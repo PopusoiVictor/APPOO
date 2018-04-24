@@ -3,6 +3,10 @@ export class User {
   public _status : string
   public _level : string
   public _signed_in : number
+  public level : string
+  public status : string
+  public signed_in : number
+  public settings : any
   constructor(email : string) {
     this.email = email;
   }
