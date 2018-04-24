@@ -85,4 +85,3 @@ console.log("cumparator: Care sunt culorile disponibile pentru stick-ul usb?")
 console.log("vinzator: " + colorAnswer);
 console.log("cumparator: Care sunt culorile disponibile pentru laptop?")
 console.log("vinzator: " + myAnswer)
-
